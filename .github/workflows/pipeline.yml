@@ -5,6 +5,8 @@ on:
       - main
     paths:
       - 'Dockerfile'
+      - 'sshd_config'
+      - 'init_container.sh'
       - '.github/workflows/pipeline.yml'
 env:
   IMAGE_NAME: ${{ secrets.DOCKER_IMAGE }}
