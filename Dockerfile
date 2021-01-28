@@ -9,4 +9,6 @@ EXPOSE 2222
 COPY ./sshd_config /etc/ssh/
 COPY ./init_container.sh .
 
-#ENTRYPOINT ["/bin/bash", "-c", "./init_container.sh && docker-entrypoint.sh apache2-foreground"]
+RUN chmod +x ./init_container.sh
+
+ENTRYPOINT ["/bin/bash", "-c", "./init_container.sh && docker-entrypoint.sh apache2-foreground"]
