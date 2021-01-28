@@ -4,7 +4,7 @@ RUN apt-get update \
   && echo "root:Docker!" | chpasswd \
   && apt install -y --no-install-recommends openssh-server
 
-EXPOSE 80 2222
+EXPOSE 2222
 
 COPY ./sshd_config /etc/ssh/
 COPY ./init_container.sh .
